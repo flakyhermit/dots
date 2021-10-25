@@ -7,3 +7,6 @@ export EDITOR="vim"
 export PROJECTS="$HOME/Projects/"
 export DROPBOX="$HOME/Dropbox/"
 export NOTES="$DROPBOX/Notes"
+
+# Functions
+mkd () { mkdir -p $1; cd $1; pwd; }
