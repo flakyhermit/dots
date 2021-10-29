@@ -8,5 +8,8 @@ export PROJECTS="$HOME/Projects/"
 export DROPBOX="$HOME/Dropbox/"
 export NOTES="$DROPBOX/Notes"
 
+# General aliases
+alias downloads="ls -td $HOME/Downloads/* | head" # 10 recent downloads
+
 # Functions
 mkd () { mkdir -p $1; cd $1; pwd; }
