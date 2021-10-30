@@ -29,3 +29,4 @@ project-cd () {
 	  echo "Project doesn't exist."
   fi
 }
+alias pro=project-cd
