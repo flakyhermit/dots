@@ -13,3 +13,18 @@ alias downloads="ls -td $HOME/Downloads/* | head" # 10 recent downloads
 
 # Functions
 mkd () { mkdir -p $1; cd $1; pwd; }
+
+project-add () {
+  echo -e "$1\t$2">>$PROJECTS/.projects
+}
+project-cd () {
+  if [ -z "$1" ] && [ -z "$2" ]; then
+    echo "Mention the project name."; return -1
+  fi
+  file=$(grep $1 $PROJECTS/.projects | awk '{ print $2 }')
+  if [[ -d $file ]]; then
+	  cd $file
+  else
+	  echo "Project doesn't exist."
+  fi
+}
