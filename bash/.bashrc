@@ -10,6 +10,7 @@ export NOTES="$DROPBOX/Notes"
 
 # General aliases
 alias downloads="ls -td $HOME/Downloads/* | head" # 10 recent downloads
+alias lsl="ls -la"
 
 # Functions
 mkd () { mkdir -p $1; cd $1; pwd; }
