@@ -34,6 +34,10 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec alacritty
+bindsym $mod+Shift+Return exec alacritty -e ranger
+
+# start common applications
+bindsym $mod+Shift+b exec firefox
 
 # kill focused window
 bindsym $mod+Shift+q kill
