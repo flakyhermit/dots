@@ -36,7 +36,6 @@ floating_modifier $mod
 bindsym $mod+Return exec alacritty
 # command-line applications
 bindsym $mod+Shift+Return exec alacritty -o window.dimensions.columns=140 -o window.dimensions.lines=22 -e ranger
-bindsym $mod++B exec alacritty -e cmus
 
 # start common applications
 bindsym $mod+Shift+b exec firefox
