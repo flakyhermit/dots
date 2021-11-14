@@ -45,6 +45,12 @@ bindsym $mod+Shift+b exec firefox
 bindsym $mod+Shift+q kill
 bindsym $alt+q kill
 
+# Brightness and volume control
+bindsym XF86MonBrightnessUp exec xbacklight -inc 4
+bindsym XF86MonBrightnessDown exec xbacklight -dec 4
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+
 # start dmenu (a program launcher)
 # bindsym $mod+p exec dmenu_run -fn "IBM Plex Mono Medium-10" -p "run " -i
 bindsym $mod+p exec "rofi -show drun"
