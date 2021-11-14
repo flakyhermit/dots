@@ -205,8 +205,12 @@ client.focused #21242b #21242b #eeeeee #21242b #21242b
 # autostart
 exec ~/.fehbg
 exec ~/.config/i3/autostart
+# Swap caps lock and escape
+exec setxkbmap -option 'caps:escape'
 # exec polybar main
 exec redshift
+exec setxkbmap us,in
+exec rsibreak
 
 # Floating windows
 for_window [class="Alacritty"] floating enable
