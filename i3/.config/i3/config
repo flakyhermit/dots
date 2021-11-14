@@ -204,10 +204,14 @@ client.focused #21242b #21242b #eeeeee #21242b #21242b
 
 # autostart
 exec ~/.fehbg
-exec ~/.config/i3/autostart
+# Start polybar
+exec killall -q polybar
+# If all your bars have ipc enabled, you can also use
+# polybar-msg cmd quit
+# echo "---" | tee -a $HOME/.log/polybar.log
+exec polybar main >> $HOME/.log/polybar.log 0>&1 &
 # Swap caps lock and escape
 exec setxkbmap -option 'caps:escape'
-# exec polybar main
 exec redshift
 exec setxkbmap us,in
 exec rsibreak
