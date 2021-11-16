@@ -41,7 +41,7 @@ bindsym $mod+Shift+Return exec alacritty -o window.dimensions.columns=140 -o win
 bindsym $mod+Shift+b exec firefox
 
 # kill focused window
-bindsym $mod+Shift+q kill
+bindsym $mod+Shift+c kill
 bindsym $alt+q kill
 
 # Brightness and volume control
@@ -146,7 +146,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+# bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # system mode
 set $mode_system System [l] lock [e] logout [s] suspend [r] reboot [shift+s] shutdown
@@ -162,7 +162,7 @@ mode "$mode_system" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-bindsym $mod+Shift+F mode "$mode_system"
+bindsym $mod+Shift+q mode "$mode_system"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
