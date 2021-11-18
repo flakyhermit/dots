@@ -211,10 +211,10 @@ exec killall -q polybar
 # echo "---" | tee -a $HOME/.log/polybar.log
 exec polybar main >> $HOME/.log/polybar.log 0>&1 &
 # Swap caps lock and escape
-exec setxkbmap -option 'caps:escape'
-exec redshift
-exec setxkbmap us,in
-exec rsibreak
+exec_always setxkbmap -option 'caps:escape'
+# exec redshift
+exec_always setxkbmap us,in
+# exec rsibreak
 
 # Floating windows
 for_window [class="Alacritty"] floating enable
