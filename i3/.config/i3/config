@@ -42,6 +42,7 @@ bindsym $mod+Shift+b exec firefox
 
 # kill focused window
 bindsym $mod+Shift+c kill
+bindsym $mod+Shift+q kill
 bindsym $alt+q kill
 
 # Brightness and volume control
