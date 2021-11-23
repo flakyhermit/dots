@@ -69,7 +69,7 @@ font-0 = Iosevka Aile:size=12;1
 modules-left = i3
 modules-center = date uptime
 ; filesystem alsa 
-modules-right = xkblayout xbacklight pulseaudio memory cpu temperature wlan eth battery
+modules-right = xkblayout memory cpu temperature xbacklight pulseaudio wlan eth battery
 
 tray-position = right
 tray-padding = 1
