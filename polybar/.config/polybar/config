@@ -366,7 +366,7 @@ format-charging-underline = ${colors.active}
 
 format-discharging =  Bat <label-discharging>
 ; format-discharging = <animation-discharging> <label-discharging>
-format-discharging-underline = ${colors.accent}
+; format-discharging-underline = ${colors.accent}
 
 format-full-prefix = ""
 format-full-prefix-foreground = ${colors.foreground-alt}
@@ -396,7 +396,7 @@ warn-temperature = 70
 
 format = <label>
 ; format = <ramp> <label>
-format-underline = ${colors.accent}
+; format-underline = ${colors.accent}
 format-warn = <label-warn>
 format-warn-underline = #ffb52a
 
