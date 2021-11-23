@@ -69,7 +69,7 @@ font-0 = Iosevka Aile:size=12;1
 modules-left = i3
 modules-center = date uptime
 ; filesystem alsa 
-modules-right = xkeyboard xbacklight pulseaudio memory cpu temperature wlan eth battery
+modules-right = xkblayout xbacklight pulseaudio memory cpu temperature wlan eth battery
 
 tray-position = right
 tray-padding = 1
@@ -88,6 +88,13 @@ tray-padding = 1
 
 cursor-click = pointer
 cursor-scroll = ns-resize
+
+[module/xkblayout]
+type = custom/script
+label = %output%
+exec="state=$(xkblayout-state print "%s"); echo ${state^^}"
+foreground = #dfdfdf
+interval = 1
 
 [module/uptime]
 type = custom/script
