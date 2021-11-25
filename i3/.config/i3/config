@@ -222,15 +222,15 @@ client.focused #21242b #21242b #eeeeee #21242b #21242b
 # autostart
 exec ~/.fehbg
 # Start polybar
-exec killall -q polybar
+exec_always killall -q polybar
 # If all your bars have ipc enabled, you can also use
 # polybar-msg cmd quit
-# echo "---" | tee -a $HOME/.log/polybar.log
-exec polybar main >> $HOME/.log/polybar.log 0>&1 &
+exec_always echo "---" | tee -a $HOME/.log/polybar.log
+exec_always polybar bar1 2>&1 | tee -a /tmp/polybar.log & disown
 # Swap caps lock and escape
 exec_always setxkbmap -option 'caps:escape'
 exec_always setxkbmap -option 'grp:alt_shift_toggle'
-exec_always setxkbmap -layout us,in -variant "altgr-intl, hin-wx"
+exec_always setxkbmap -layout "us,in" -variant "altgr-intl, hin-wx"
 # exec rsibreak
 # exec redshift
 
