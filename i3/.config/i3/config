@@ -230,7 +230,7 @@ exec_always polybar bar1 2>&1 | tee -a /tmp/polybar.log & disown
 # Swap caps lock and escape
 exec_always setxkbmap -option 'caps:escape'
 exec_always setxkbmap -option 'grp:alt_shift_toggle'
-exec_always setxkbmap -layout "us,in" -variant "altgr-intl, hin-wx"
+exec_always setxkbmap -layout "us,in,us_qwerty-fr" -variant "altgr-intl, hin-wx"
 # exec rsibreak
 # exec redshift
 
