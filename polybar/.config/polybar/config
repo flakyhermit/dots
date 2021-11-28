@@ -69,7 +69,7 @@ font-0 = Iosevka Aile:size=12;1
 modules-left = i3
 modules-center = date uptime
 ; filesystem alsa 
-modules-right = xkblayout memory temperature xbacklight pulseaudio wlan eth battery
+modules-right = xkblayout memory cpu temperature xbacklight pulseaudio wlan eth battery
 
 tray-position = right
 tray-padding = 1
@@ -92,7 +92,7 @@ cursor-scroll = ns-resize
 [module/xkblayout]
 type = custom/script
 label = %output%
-exec="state=$(xkblayout-state print "%s"); echo ${state^^}"
+exec = sh $HOME/.config/polybar/scripts/xkblayout.sh
 foreground = #dfdfdf
 interval = 1
 
