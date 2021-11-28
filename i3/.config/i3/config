@@ -228,9 +228,8 @@ exec_always killall -q polybar
 exec_always echo "---" | tee -a $HOME/.log/polybar.log
 exec_always polybar main 2>&1 | tee -a /tmp/polybar.log & disown
 # Swap caps lock and escape
-exec_always setxkbmap -option 'caps:escape'
-exec_always setxkbmap -option 'grp:alt_shift_toggle'
-exec_always setxkbmap -layout "us,in,us_qwerty-fr" -variant "altgr-intl, hin-wx"
+exec setxkbmap -option 'grp:alt_shift_toggle, caps:escape'
+exec setxkbmap -layout "us, us_qwerty-fr, in" -variant "altgr-intl, , hin-wx"
 # exec rsibreak
 # exec redshift
 
