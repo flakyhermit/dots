@@ -366,18 +366,15 @@ adapter = AC
 full-at = 65
 
 format-charging = AC <label-charging>
-;format-charging = <animation-charging> <label-charging>
 format-charging-underline = ${colors.active}
 
 format-discharging =  Bat <label-discharging>
-; format-discharging = <animation-discharging> <label-discharging>
-; format-discharging-underline = ${colors.accent}
 
 label-full = %percentage_raw%%
 label-discharging = %percentage_raw%%
 label-charging = %percentage_raw%%
+
 format-full = Full <label-full>
-format-full-prefix-foreground = ${colors.foreground-alt}
 format-full-underline = ${self.format-charging-underline}
 
 ramp-capacity-0 = 
