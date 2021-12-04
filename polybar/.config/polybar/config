@@ -363,7 +363,7 @@ label-muted = sound muted
 type = internal/battery
 battery = BAT0
 adapter = AC
-full-at = 9878
+full-at = 65
 
 format-charging = AC <label-charging>
 ;format-charging = <animation-charging> <label-charging>
@@ -373,7 +373,10 @@ format-discharging =  Bat <label-discharging>
 ; format-discharging = <animation-discharging> <label-discharging>
 ; format-discharging-underline = ${colors.accent}
 
-format-full-prefix = ""
+label-full = %percentage_raw%%
+label-discharging = %percentage_raw%%
+label-charging = %percentage_raw%%
+format-full = Full <label-full>
 format-full-prefix-foreground = ${colors.foreground-alt}
 format-full-underline = ${self.format-charging-underline}
 
