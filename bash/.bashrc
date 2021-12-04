@@ -1,6 +1,6 @@
 
 # Set prompt
-PS1="\t \[\e[00m\]\[\e[1;36m\]\h \[\e[00m\]\W \[\e[2;37m\]\$ \[\e[00m\]" 
+PS1="\t \[\e[00m\]\[\e[1;34m\]\h \[\e[00m\]\W \[\e[1;30m\]\$ \[\e[00m\]" 
 
 # Envars
 export HISTSIZE=3000
