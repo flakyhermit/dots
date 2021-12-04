@@ -241,13 +241,18 @@ label = %percentage_used%%
 type = internal/network
 interface = wlp61s0
 interval = 3.0
+ping-interval = 10.0
 
 format-connected-prefix = "Net "
 format-connected-prefix-foreground = ${colors.foreground-alt}
 format-connected = <label-connected>
-; format-connected = <ramp-signal> <label-connected>
 format-connected-underline = ${colors.active}
 label-connected = %essid%
+
+format-packetloss-prefix = "Net "
+format-packetloss-prefix-foreground = ${colors.foreground-alt}
+format-packetloss = <label-connected>
+format-packetloss-underline = ${colors.primary}
 
 format-disconnected-prefix = "Net "
 format-disconnected-prefix-foreground = ${colors.foreground-alt}
