@@ -10,8 +10,11 @@ export PROJECTS="$HOME/Projects/"
 export DROPBOX="$HOME/Dropbox/"
 export NOTES="$DROPBOX/Notes"
 
+export PATH=$PATH:$HOME/.local/bin
+
 # General aliases
 alias downloads="ls -td $HOME/Downloads/* | head" # 10 recent downloads
+alias ls="ls --color" # ls with colors
 alias lsl="ls -la"
 
 # Functions
