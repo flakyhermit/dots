@@ -1,0 +1,47 @@
+/**
+ * ROFI Dmenu Theme
+ * User: flakyhermit
+ */
+
+* {
+    background-color:      #222222;
+    font:   "Iosevka Aile 13";
+    border-color:          #766ABB;
+    text-color: White;
+    accent: #766ABB;
+    gray: #aaaaaa;
+    background-alt: #282c34;
+}
+window {
+    anchor:     north;
+    location:   north;
+    width:      100%;
+    height:     27px;
+    children:   [ mainbox ];
+}
+mainbox {
+    orientation: horizontal;
+    children:   [ prompt, entry, listview ];
+}
+listview {
+    layout:     horizontal;
+    spacing:    5px;
+}
+prompt {
+    border: 0 0 2px 0;
+    padding: 0 5px;
+}
+entry {
+    expand:     false;
+    width:      18em;
+    padding:    0 5px;
+}
+element {
+    padding: 0px 5px;
+}
+element-text {
+    padding: 0px 5px;
+}
+element-text selected {
+    background-color: @accent;
+}
