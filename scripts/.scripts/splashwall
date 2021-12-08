@@ -1,0 +1,37 @@
+#!/usr/bin/bash
+
+root=https://api.unsplash.com/
+endpoint="/photos/random?query=$1&orientation=landscape"
+
+CURL=/usr/bin/curl
+JQ=/usr/bin/jq
+
+$CURL --silent -H "Authorization: Client-ID GFlIV8NlRMY0zDOmC9haJL4i2kalIzH3Kssx_cAqaeQ" $root$endpoint > .results.json
+var=$?
+if [ "$var" == "0" ]; then
+  echo ""
+else
+  echo "Can't reach Unsplash servers. Check your network connection."
+  exit
+fi
+
+photo_url=$($JQ '.urls.full' .results.json)
+# echo $photo_url
+photo_url=$(sed -e 's/^"//' -e 's/"$//' <<<"$photo_url") # Remove opening and closing quotes
+
+OPDIR=$HOME/.wallpapers
+op=$OPDIR/$(date +%s).jpeg
+rm $OPDIR/*.jpeg > /dev/null # Remove previously downloaded wallpaper
+$CURL $photo_url --output $op >> /dev/null
+
+# Setting wallpaper with feh
+feh --bg-fill $op
+# # Setting wallpaper with dbus
+# qdbus org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.evaluateScript 'var allDesktops = desktops();
+
+# print (allDesktops);for (i=0;i<allDesktops.length;i++) {
+# d = allDesktops[i];d.wallpaperPlugin = "org.kde.image";
+# d.currentConfigGroup = Array("Wallpaper", "org.kde.image", "General");
+# d.writeConfig("Image", "'file://${op}'")}'
+
+# kwriteconfig5 --file kscreenlockerrc --group Greeter --group Wallpaper --group org.kde.image --group General --key Image "file://${op}"
