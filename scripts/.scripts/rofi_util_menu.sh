@@ -26,6 +26,10 @@ case "$@" in
     "wallpaper: r/animewallpaper" )
         $HOME/.local/bin/snoowall-cli animewallpaper >> /dev/null
         ;;
+    "wallpaper: Unsplash" )
+        coproc ( i3-input -F "exec ~/.local/bin/splashwall %s" -P "keyword: ")
+        exit 0
+        ;;
     "brightness: Max" )
         xbacklight -set 100
         exit 0
@@ -44,3 +48,4 @@ echo "brightness: Min"
 echo "polybar: Restart"
 echo "wallpaper: r/EarthPorn"
 echo "wallpaper: r/animewallpaper"
+echo "wallpaper: Unsplash"
