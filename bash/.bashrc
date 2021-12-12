@@ -6,6 +6,7 @@ PS1="\[\e[1;34m\]\w\[\e[00m\] \[\e[1;30m\]\$ \[\e[00m\]"
 export HISTSIZE=3000
 export HISTFILESIZE=3000
 export EDITOR="vim"
+export TERMINAL="alacritty"
 export PROJECTS="$HOME/Projects/"
 export DROPBOX="$HOME/Dropbox/"
 export NOTES="$DROPBOX/Notes"
