@@ -1,0 +1,17 @@
+# This is Git's per-user configuration file.
+[user]
+	name = Jewel James
+	email = flakyhermit@protonmail.ch
+[core]
+	editor = vim
+[alias]
+	sla = log --oneline --decorate --graph --all
+	shortstat = status --short
+	sst = status --short
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[init]
+	defaultBranch = main
