@@ -15,6 +15,10 @@ case "$@" in
         redshift -PO 7000 >> /dev/null
         exit 0
         ;;
+    "redshift: Toggle")
+        pkill -USR1 redshift
+        exit 0
+        ;;
     "polybar: Restart")
         killall -q polybar
         coproc ( polybar main > /dev/null  2>&1 )
@@ -49,3 +53,4 @@ echo "polybar: Restart"
 echo "wallpaper: r/EarthPorn"
 echo "wallpaper: r/animewallpaper"
 echo "wallpaper: Unsplash"
+echo "redshift: Toggle"
