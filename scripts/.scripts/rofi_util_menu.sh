@@ -3,6 +3,10 @@
 case "$@" in
     quit)
         exit 0 ;;
+    "i3: Nuxt project - RedeyFinserve")
+        i3-msg "workspace 1; append_layout /home/monk/.config/i3/nuxt-project-rfi.json; exec firefox -new-window localhost:3000; exec emacs ~/Projects/redeyfins/pages/index.vue; exec alacritty -e bash -c 'cd Projects/redeyfins && npm run dev'" >> /dev/null
+        exit 0
+        ;;
     "i3: French study")
         i3-msg "workspace 1; append_layout /home/monk/.config/i3/language-learning.json; exec firefox -new-window www.duolingo.com/dictionary/French; exec emacs ~/Dropbox/Notes/org/knowledgebase/references/20211126051736-ultimate_french_living_language.org; exec okular ~/Documents/Textbooks/ultimate-french-ll.pdf" >> /dev/null
         exit 0
@@ -54,14 +58,15 @@ case "$@" in
         ;;
 esac
 
-echo "i3: French study"
-echo "redshift: Night"
-echo "redshift: Day"
+echo "redshift: Toggle"
+echo "trackpad: Enable/Disable"
+echo "wallpaper: Unsplash"
 echo "brightness: Max"
 echo "brightness: Min"
 echo "polybar: Restart"
 echo "wallpaper: r/EarthPorn"
 echo "wallpaper: r/animewallpaper"
-echo "wallpaper: Unsplash"
-echo "trackpad: Enable/Disable"
-echo "redshift: Toggle"
+echo "redshift: Day"
+echo "redshift: Night"
+echo "i3: French study"
+echo "i3: Nuxt project - RedeyFinserve"
