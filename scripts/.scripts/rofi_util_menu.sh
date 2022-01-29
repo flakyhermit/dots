@@ -42,6 +42,16 @@ case "$@" in
         xbacklight -set 5
         exit 0
         ;;
+    "trackpad: Enable/Disable" )
+        id=$(xinput | grep Touchpad | grep -o 'id=\([0-9]*\)' | cut -c 4-)
+        status=$(xinput --list-props $id | grep "Device Enabled" | sed 's/^.*://' | sed 's/\s*//g')
+        if [ $status -eq 0 ]; then
+            xinput --enable $id
+        else
+            xinput --disable $id
+        fi
+        exit 0
+        ;;
 esac
 
 echo "i3: French study"
@@ -53,4 +63,5 @@ echo "polybar: Restart"
 echo "wallpaper: r/EarthPorn"
 echo "wallpaper: r/animewallpaper"
 echo "wallpaper: Unsplash"
+echo "trackpad: Enable/Disable"
 echo "redshift: Toggle"
