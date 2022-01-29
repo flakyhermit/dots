@@ -237,7 +237,7 @@ exec_always polybar main 2>&1 | tee -a /tmp/polybar.log & disown
 # Swap caps lock and escape
 exec_always setxkbmap -layout "us_qwerty-fr, in" -variant ", hin-wx" -option 'grp:alt_shift_toggle,caps:escape'
 # exec rsibreak
-# exec redshift
+exec redshift
 
 # Floating windows
 for_window [class="Alacritty"] floating enable
