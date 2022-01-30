@@ -58,8 +58,9 @@ bindsym XF86Favorites exec keepassxc
 # bindsym $mod+p exec dmenu_run -fn "IBM Plex Mono Medium-10" -p "run " -i
 bindsym $mod+p exec "rofi -show drun"
 bindsym $mod+d exec "rofi -show run"
-bindsym $mod+Shift+p exec "rofi -show power -modi 'power:~/.scripts/rofi_power_menu.sh'"
-bindsym $mod+Shift+u exec "rofi -show util -modi 'util:~/.scripts/rofi_util_menu.sh'"
+bindsym $mod+Shift+Escape exec "rofi -show power -modi 'power:~/.scripts/rofi_power_menu.sh'"
+bindsym $mod+F11 exec "rofi -show util -modi 'util:~/.scripts/rofi_util_menu.sh'"
+bindsym $mod+F10 exec "keepmenu"
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
