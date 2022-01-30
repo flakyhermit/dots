@@ -238,6 +238,11 @@ exec_always polybar main 2>&1 | tee -a /tmp/polybar.log & disown
 exec_always setxkbmap -layout "us_qwerty-fr, in" -variant ", hin-wx" -option 'grp:alt_shift_toggle,caps:escape'
 # exec rsibreak
 exec redshift
+# Start emacs in background
+exec emacs --name="Emacs — Primary Window" -g 95x32+500+500
+for_window [title="Emacs — Primary Window"] move scratchpad
+# Keybinding to focus emacs
+bindsym $mod+F12 [title="Emacs — Primary Window"] scratchpad show
 
 # Floating windows
 for_window [class="Alacritty"] floating enable
