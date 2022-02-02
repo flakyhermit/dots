@@ -246,7 +246,8 @@ for_window [title="Emacs — Primary Window"] move scratchpad
 # Keybinding to focus emacs
 bindsym $mod+F12 [title="Emacs — Primary Window"] scratchpad show
 
-for_window [title="Add" class="Anki"] floating enable
+for_window [title="Add" class="[Aa]nki"] move scratchpad
+bindsym $mod+F8 [title="Add" class="[Aa]nki"] scratchpad show
 
 # Floating windows
 for_window [class="Alacritty"] floating enable
