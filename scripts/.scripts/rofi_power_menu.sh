@@ -3,16 +3,16 @@
 case "$@" in
     quit)
         exit 0 ;;
-    "Shutdown")
+    "3 Shutdown")
         systemctl poweroff >> /dev/null
         ;;
-    "Suspend")
+    "4 Suspend")
         systemctl suspend >> /dev/null
         exit 0
         ;;
 esac
 
-echo "Lock"
-echo "Logout"
-echo "Shutdown"
-echo "Suspend"
+echo "1 Lock"
+echo "2 Logout"
+echo "3 Shutdown"
+echo "4 Suspend"
