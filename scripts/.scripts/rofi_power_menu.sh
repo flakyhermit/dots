@@ -3,6 +3,9 @@
 case "$@" in
     quit)
         exit 0 ;;
+    "2 Logout")
+        i3-msg 'exit' >> /dev/null
+        ;;
     "3 Shutdown")
         systemctl poweroff >> /dev/null
         ;;
