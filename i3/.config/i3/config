@@ -57,7 +57,7 @@ bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
 # bindsym $mod+p exec dmenu_run -fn "IBM Plex Mono Medium-10" -p "run " -i
 bindsym $mod+p exec "rofi -show drun"
 bindsym $mod+d exec "rofi -show run"
-bindsym $mod+Shift+Escape exec "rofi -show power -modi 'power:~/.scripts/rofi_power_menu.sh'"
+bindsym $mod+Escape exec "rofi -show power -modi 'power:~/.scripts/rofi_power_menu.sh'"
 bindsym $mod+F10 exec "rofi -show util -modi 'util:~/.scripts/rofi_util_menu.sh'"
 bindsym $mod+F11 exec "keepmenu"
 bindsym $mod+Shift+F11 exec "pkill -SIGTERM keepmenu"
@@ -151,6 +151,7 @@ bindsym $mod+Shift+0 move container to workspace 10
 bindsym $mod+Shift+x reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
+bindsym $mod+Shift+Escape exec --no-startup-id "systemctl suspend"
 # exit i3 (logs you out of your X session)
 # bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
