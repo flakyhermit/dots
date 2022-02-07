@@ -180,7 +180,7 @@ bindsym $mod+o mode "$mode_launcher"
 mode "$mode_launcher" {
     bindsym b exec firefox; mode "default"
     bindsym p exec firefox --private-window; mode "default"
-    bindsym e exec emacs; mode "default"
+    bindsym e exec emacsclient -e "(make-frame)"; mode "default"
     bindsym a exec anki; mode "default"
     bindsym s exec signal-desktop; mode "default"
 
