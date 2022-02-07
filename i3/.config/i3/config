@@ -252,6 +252,7 @@ bindsym $mod+F8 [title="Add" class="[Aa]nki"] scratchpad show
 # Floating windows
 for_window [class="Alacritty"] floating enable
 for_window [class="Artha"] floating enable
+for_window [class="[sS]ignal"] floating enable
 
 # KDE i3 settings
 # # general application settings
