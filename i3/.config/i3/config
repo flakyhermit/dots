@@ -241,7 +241,8 @@ exec_always setxkbmap -layout "us_qwerty-fr, in" -variant ", hin-wx" -option 'gr
 # exec rsibreak
 exec redshift
 # Start emacs in background
-exec emacs --name="Emacs — Primary Window" -g 95x32+500+500
+exec emacs --name="Emacs — Primary Window" -g 95x35
+for_window [title="Emacs — Primary Window"] floating enable
 for_window [title="Emacs — Primary Window"] move scratchpad
 # Keybinding to focus emacs
 bindsym $mod+F12 [title="Emacs — Primary Window"] scratchpad show
