@@ -69,7 +69,7 @@ case "$@" in
         status=$(windscribe status | grep CONNECTED)
         if [ $status = "DISCONNECTED" ]; then
             windscribe connect > /tmp/vpnstatuslog &&
-                notify-send Windscribe "$(cat /tmp/vpnstatuslog | grep "Your IP")"
+                notify-send Windscribe "$(cat /tmp/vpnstatuslog | tail -2)"
         else
             windscribe disconnect > /dev/null &&
                 notify-send Windscribe "VPN disconnected"
