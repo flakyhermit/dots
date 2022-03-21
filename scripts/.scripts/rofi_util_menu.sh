@@ -64,9 +64,23 @@ case "$@" in
             nmcli radio wifi off
         fi
         exit 0
+        ;;
+    "VPN: Toggle" )
+        status=$(windscribe status | grep CONNECTED)
+        if [ $status = "DISCONNECTED" ]; then
+            windscribe connect > /tmp/vpnstatuslog &&
+                notify-send Windscribe "$(cat /tmp/vpnstatuslog | grep "Your IP")"
+        else
+            windscribe disconnect > /dev/null &&
+                notify-send Windscribe "VPN disconnected"
+        fi
+        exit 0
+        ;;
+
 esac
 
 echo "WiFi: Toggle"
+echo "VPN: Toggle"
 echo "redshift: Toggle"
 echo "trackpad: Enable/Disable"
 echo "wallpaper: Unsplash"
