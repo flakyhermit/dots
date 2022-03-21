@@ -56,8 +56,17 @@ case "$@" in
         fi
         exit 0
         ;;
+    "WiFi: Toggle" )
+        status=$(nmcli radio wifi)
+        if [ $status = "disabled" ]; then
+            nmcli radio wifi on
+        else
+            nmcli radio wifi off
+        fi
+        exit 0
 esac
 
+echo "WiFi: Toggle"
 echo "redshift: Toggle"
 echo "trackpad: Enable/Disable"
 echo "wallpaper: Unsplash"
