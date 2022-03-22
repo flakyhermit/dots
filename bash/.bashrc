@@ -17,9 +17,12 @@ export PATH=$PATH:$HOME/.local/bin
 alias downloads="ls -td $HOME/Downloads/* | head" # 10 recent downloads
 alias ls="ls --color" # ls with colors
 alias lsl="ls -la"
+alias inode-use="find $1 -xdev -type f | cut -d "/" -f 2 | sort | uniq -c | sort -n"
+alias calc="exec alacritty -e R"
 
 # Functions
 mkd () { mkdir -p $1; cd $1; pwd; }
+rn-lower () { mv "$1" "${1,,}"; }
 
 project-add () {
   echo -e "$1\t$2">>$PROJECTS/.projects
