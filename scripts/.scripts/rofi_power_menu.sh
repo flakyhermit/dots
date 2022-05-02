@@ -4,7 +4,8 @@ case "$@" in
     quit)
         exit 0 ;;
     "1 Lock")
-        i3lock >> /dev/null
+        /usr/bin/i3lock >> /dev/null &
+        exit 0
         ;;
     "2 Logout")
         i3-msg 'exit' >> /dev/null
