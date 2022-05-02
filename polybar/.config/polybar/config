@@ -18,7 +18,8 @@
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #181818
+background = #000000
+; background = #181818
 background-alt = #282c34
 ;foreground = ${xrdb:color7:#222}
 foreground = #dfdfdf
@@ -61,7 +62,7 @@ module-margin-right = 1
 
 dim-value = 0.9
 
-font-0 = Iosevka Aile:size=12;1
+font-0 = Iosevka Sparkle:size=12;1
 ;font-0 = fixed:pixelsize=13;1
 ;font-1 = unifont:fontformat=truetype:size=9:antialias=false;0
 ;font-2 = siji:pixelsize=10;1
@@ -69,7 +70,7 @@ font-0 = Iosevka Aile:size=12;1
 modules-left = i3
 modules-center = date uptime
 ; filesystem alsa 
-modules-right = xkeyboard xbacklight pulseaudio wlan eth battery
+modules-right = xkeyboard xbacklight pulseaudio cpu wlan eth battery
 
 tray-position = right
 tray-padding = 1
@@ -106,16 +107,16 @@ format-prefix-foreground = ${colors.foreground-alt}
 format-prefix-underline = ${colors.accent}
 
 label-layout = %icon%
-label-indicator-on = %name%
-label-indicator-off = ""
-indicator-icon-default = ""
-indicator-icon-0 = caps lock;"";""
-indicator-icon-1 = scroll lock;;+SL
-indicator-icon-2 = num lock;-NL;+NL
+label-indicator-on = %icon%
+label-indicator-off =
+; ; indicator-icon-default =
+indicator-icon-0 = caps lock;-Cap;+Cap
+indicator-icon-1 = scroll lock;;+Sl
+indicator-icon-2 = num lock;;+Nl
 layout-icon-default = EN
-layout-icon-0 = us;EN
-layout-icon-1 = us_qwerty-fr;FR
-layout-icon-2 = in;HI
+layout-icon-0 = us;En
+layout-icon-1 = us_qwerty-fr;Fr
+layout-icon-2 = in;Hi
 
 [module/filesystem]
 type = internal/fs
