@@ -1,4 +1,4 @@
 configuration {
     drun-display-format: "{name}";
 }
-@theme "/home/monk/.config/rofi/themes/dmenu.rasi"
+@theme "~/.config/rofi/themes/dmenu.rasi"
